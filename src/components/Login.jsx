@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { account } from '../appwrite/appwrite'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const navigate = useNavigate()
@@ -74,12 +75,12 @@ function Login() {
 
               <div className="flex items-center justify-between">
                 <div className="text-sm">
-                  <a
-                    href="/signup"
+                  <Link
+                    to="/"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     Don't have Account, Sign Up
-                  </a>
+                  </Link>
                 </div>
               </div>
 
