@@ -9,9 +9,15 @@ function Login() {
     password: ""
   })
 
-  const signin = (e) => {
+  const signin = async (e) => {
     e.preventDefault()
     console.log(user)
+    try {
+      await account.createEmailSession(user.email, user.password)
+      navigate('/profile')
+    } catch (error) {
+      console.log(error)
+    }
   }
   return (
     <>
